@@ -13,7 +13,7 @@ script.onload = function() {
     })
     crate.notify({
         content: "Need help? **DON'T ASK IF YOU CAN ASK**. Just ask the question!",
-        timeout: 10000,
+        timeout: 5000,
         avatar: '/images/MCH.png'
     })
 }
