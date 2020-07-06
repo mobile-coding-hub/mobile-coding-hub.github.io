@@ -1,0 +1,32 @@
+name: Deploy MkDocs files
+
+on:
+  push:
+    paths: 
+    - 'docs/**'
+    - 'mkdocs.yml'
+    - 'themes/**'
+    branches:
+    - master
+
+jobs:
+  build:
+    runs-on: [ubuntu-latest]
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.8
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.8
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip setuptools
+        python -m pip install -U -r requirements.txt
+    - name: Deploy Files
+      run: |
+        git config user.name "github-actions[bot]" # We can use the Username and E-Mail of GitHub Actions for Git.
+        git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git remote add repo "https://github.com/mobile-coding-hub/mobile-coding-hub.github.io.git"
+        git fetch repo && git fetch repo docs:docs
+        python -m mkdocs gh-deploy --clean --remote-name repo
+        git push repo master
