@@ -7,7 +7,7 @@ on:
     - 'mkdocs.yml'
     - 'themes/**'
     branches:
-    - master
+    - docs
 
 jobs:
   build:
