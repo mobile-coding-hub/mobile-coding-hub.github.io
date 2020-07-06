@@ -28,5 +28,5 @@ jobs:
         git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
         git remote add repo "https://github.com/mobile-coding-hub/mobile-coding-hub.github.io.git"
         git fetch repo && git fetch -u repo docs:docs
-        python -m mkdocs gh-deploy --clean --remote-name repo
+        python -m mkdocs gh-deploy --clean --remote-name repo --remote-branch master
         git push repo master
