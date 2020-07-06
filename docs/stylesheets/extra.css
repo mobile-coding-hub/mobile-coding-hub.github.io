@@ -1,0 +1,33 @@
+#owner-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mch-logo {
+  display: flex;
+  float: right;
+}
+
+/*nav footer {
+  height: 10%;
+  background-color: #1b1b1b;
+  z-index: 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.btn-dark-mode {
+  color: rgba(255, 255, 255, 0.75) !important;
+  background-color: #36393E !important;
+  padding: 0.75em;
+  border-radius: 10px;
+  float: right;
+  transition: all ease-in-out 250ms;
+  font-size: .75rem;
+}
+
+.btn-dark-mode:hover {
+  background-color: #888484 !important;
+}*/

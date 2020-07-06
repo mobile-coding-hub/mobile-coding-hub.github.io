@@ -1,0 +1,103 @@
+# Project information
+site_name: 'Mobile Coding Hub'
+site_description:
+    The conventional barriers of PC Only Coding are being broken day to day by the advancement in technologies.
+    At MCH, we aspire to make the masses more aware about the possibilities of mobile coding. May it be your phone/tablet/browser on a toaster!(Yes, they do exist!)
+site_author: 'AXVin'
+site_url: 'https://mobile-coding-hub.github.io'
+
+# Repository
+repo_name: 'mobile-coding-hub/mobile-coding-hub.github.io'
+repo_url: 'https://github.com/mobile-coding-hub/mobile-coding-hub.github.io'
+
+
+# Copyright
+copyright: 'Copyright &copy; 2020 AXVin'
+
+# Navigation
+nav:
+    - Home: index.md
+    - Getting Started: started.md
+    - Termux:
+        - Introduction: termux/index.md
+        - Installation: termux/installation.md
+        - Customisation:
+            - Introduction: termux/customisation/index.md
+            - Extra Keys: termux/customisation/extra_keys.md
+    - Help & Support: support.md
+
+# Configuration
+theme:
+    name: 'material'
+    custom_dir: 'themes'
+    language: 'en'
+    palette:
+        scheme: slate
+        primary: 'teal'
+        accent: 'orange'
+    font:
+        text: 'Roboto'
+        code: 'Roboto Mono'
+    feature:
+        - tabs
+    logo: 'images/MCH_Mobile.svg'
+    favicon: 'images/MCH_Mobile.svg'
+    shortcuts:
+        help: 72     # h
+        next: 78     # n
+        previous: 80 # p
+        search: 83   # s
+
+extra_css:
+  - 'stylesheets/extra.css'
+  # - 'stylesheets/dark.css'
+
+# extra_javascript:
+#   - 'javascripts/extra.js'
+
+google_analytics:
+  - 'UA-143099709-1'
+  - 'auto'
+
+# Customization
+extra:
+    social:
+        - icon: material/discord
+          link: https://discord.gg/SVh4jJP
+        - icon: material/patreon
+          link: https://patreon.com/AXVin
+        - icon: material/twitter
+          link: https://twitter.com/AXVin
+        - icon: material/bitbucket
+          link: https://bitbucket.org/AXVin
+        - icon: material/instagram
+          link: https://instagram.com/__axvin__
+    version: 1.1
+
+# Extensions
+markdown_extensions:
+    - footnotes
+    - admonition
+    - codehilite:
+        guess_lang: false
+    - toc:
+        permalink: true
+    - meta
+    - pymdownx.arithmatex
+    - pymdownx.betterem:
+        smart_enable: all
+    - pymdownx.caret
+    - pymdownx.critic
+    - pymdownx.details
+    - pymdownx.emoji:
+        emoji_index: !!python/name:materialx.emoji.twemoji
+        emoji_generator: !!python/name:materialx.emoji.to_svg
+    - pymdownx.inlinehilite
+    - pymdownx.magiclink
+    - pymdownx.mark
+    - pymdownx.smartsymbols
+    - pymdownx.superfences
+    - pymdownx.tasklist:
+        custom_checkbox: true
+    - pymdownx.tabbed
+    - pymdownx.tilde

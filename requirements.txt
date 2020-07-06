@@ -1,0 +1,7 @@
+
+mkdocs
+mkdocs-material
+mkdocs-material-extensions
+mkdocs-minify-plugin
+pygments
+mkdocs-git-revision-date-localized-plugin

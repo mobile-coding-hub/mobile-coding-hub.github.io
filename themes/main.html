@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block site_meta %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  {% if page and page.meta and page.meta.hero %}
+    <meta name="description" content="{{ page.meta.hero }}">
+  {% elif page and page.meta and page.meta.description %}
+    <meta name="description" content="{{ page.meta.description }}">
+  {% elif config.site_description %}
+    <meta name="description" content="{{ config.site_description }}">
+  {% endif %}
+  {% if page and page.meta and page.meta.redirect %}
+    <script>var anchor=window.location.hash.substr(1);location.href="{{ page.meta.redirect }}"+(anchor?"#"+anchor:"")</script>
+    <meta http-equiv="refresh" content="0; url={{ page.meta.redirect }}">
+    <meta name="robots" content="noindex">
+    <link rel="canonical" href="{{ page.meta.redirect }}">
+  {% elif page.canonical_url %}
+    <link rel="canonical" href="{{ page.canonical_url }}">
+  {% endif %}
+  {% if page and page.meta and page.meta.author %}
+    <meta name="author" content="{{ page.meta.author }}">
+  {% elif config.site_author %}
+    <meta name="author" content="{{ config.site_author }}">
+  {% endif %}
+  {% if config.theme.logo %}
+    <meta name="og:image" content="{{ config.site_url }}/{{ config.theme.logo }}">
+  {% endif %}
+  <link rel="shortcut icon" href="{{ config.theme.favicon | url }}">
+  <meta name="generator" content="mkdocs-{{ mkdocs_version }}, mkdocs-material-5.4.0">
+{% endblock %}
+
+{% block styles %}
+  {{ super() }}
+  {% if palette.primary %}
+    {% import "partials/palette.html" as map %}
+    {% set primary = map.primary(
+      palette.primary | replace(" ", "-") | lower
+    ) %}
+    {% if primary %}
+      <meta name="theme-color" content="{{ primary }}">
+    {% elif config.theme.palette.primary.startswith('#') %}
+      <meta name="theme-color" content="{{ config.theme.palette.primary }}">
+    {% endif %}
+  {% endif %}
+{% endblock %}
+
+{% block extrahead %}
+{% endblock %}
