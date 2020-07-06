@@ -50,10 +50,6 @@ theme:
 
 extra_css:
   - 'stylesheets/extra.css'
-  # - 'stylesheets/dark.css'
-
-# extra_javascript:
-#   - 'javascripts/extra.js'
 
 google_analytics:
   - 'UA-143099709-1'
