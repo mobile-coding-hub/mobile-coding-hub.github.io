@@ -571,7 +571,7 @@ To enable the extra keys view you have to long tap on the keyboard button in the
 (Swipe from left → right to open the drawer)</p>
 <div class="admonition abstract">
 <p class="admonition-title">Abstract</p>
-<p><img alt="Termux Left Drawer" src="/images/termux_left_drawer.png" /></p>
+<p><img alt="Termux Left Drawer" src="/images/termux_left_drawer.jpg" /></p>
 </div>
 <p>You can also press <code>VOLUME UP+Q</code> or <code>VOLUME UP+K</code>.</p>
 <div class="admonition note">
@@ -586,6 +586,12 @@ You can remove these by long pressing on the keyboard again</p>
 </code></pre></div>
 
 </div>
+<details class="error"><summary>Directory .../home/.termux doesn't exist</summary><p><img alt="Termux Nano Directory Doesn't Exist" src="/images/termux_directory_doesnt_exist.jpg" /></p>
+<p>If you get the above error, then that means that the <code>.termux</code> directory
+doesn't exist. Try making it, before doing this, with
+<div class="highlight"><pre><span></span><code>mkdir <span class="nv">$HOME</span>/.termux/
+</code></pre></div></p>
+</details>
 <p>Now we will start by adding two rows of some really useful keys(default keys until v0.66)</p>
 <div class="admonition example">
 <div class="highlight"><pre><span></span><code>extra-keys <span class="o">=</span> <span class="o">[[</span><span class="s1">&#39;ESC&#39;</span>,<span class="s1">&#39;/&#39;</span>,<span class="s1">&#39;-&#39;</span>,<span class="s1">&#39;HOME&#39;</span>,<span class="s1">&#39;UP&#39;</span>,<span class="s1">&#39;END&#39;</span>,<span class="s1">&#39;PGUP&#39;</span><span class="o">]</span>,<span class="o">[</span><span class="s1">&#39;TAB&#39;</span>,<span class="s1">&#39;CTRL&#39;</span>,<span class="s1">&#39;ALT&#39;</span>,<span class="s1">&#39;LEFT&#39;</span>,<span class="s1">&#39;DOWN&#39;</span>,<span class="s1">&#39;RIGHT&#39;</span>,<span class="s1">&#39;PGDN&#39;</span><span class="o">]]</span>
@@ -598,7 +604,7 @@ if desired, by "backslash-escaping" the line feed at the end of each line, thus:
 <div class="admonition example">
 <div class="highlight"><pre><span></span><code>extra-keys <span class="o">=</span> <span class="o">[</span> <span class="se">\</span>
     <span class="o">[</span><span class="s1">&#39;ESC&#39;</span>,<span class="s1">&#39;/&#39;</span>,<span class="s1">&#39;-&#39;</span>,<span class="s1">&#39;HOME&#39;</span>,<span class="s1">&#39;UP&#39;</span>,<span class="s1">&#39;END&#39;</span>,<span class="s1">&#39;PGUP&#39;</span><span class="o">]</span>, <span class="se">\</span>
-    <span class="o">[</span><span class="s1">&#39;TAB&#39;</span>,<span class="s1">&#39;CTRL&#39;</span>,<span class="s1">&#39;ALT&#39;</span>,<span class="s1">&#39;LEFT&#39;</span>,<span class="s1">&#39;DOWN&#39;</span>,<span class="s1">&#39;RIGHT&#39;</span>,<span class="s1">&#39;PGDN&#39;</span><span class="o">]</span>
+    <span class="o">[</span><span class="s1">&#39;TAB&#39;</span>,<span class="s1">&#39;CTRL&#39;</span>,<span class="s1">&#39;ALT&#39;</span>,<span class="s1">&#39;LEFT&#39;</span>,<span class="s1">&#39;DOWN&#39;</span>,<span class="s1">&#39;RIGHT&#39;</span>,<span class="s1">&#39;PGDN&#39;</span><span class="o">]</span> <span class="se">\</span>
 <span class="o">]</span>
 </code></pre></div>
 
@@ -606,7 +612,7 @@ if desired, by "backslash-escaping" the line feed at the end of each line, thus:
 <div class="admonition success">
 <p class="admonition-title">Success</p>
 <p>It should look something like this:</p>
-<p><img alt="Termux Extra Keys Written" src="/images/termux_extra_keys_written.png" /></p>
+<p><img alt="Termux Extra Keys Written" src="/images/termux_extra_keys_written.jpg" /></p>
 </div>
 <p>Each key "entry" can be either a string (such as <code>'|'</code>, <code>'/'</code> or <code>'='</code>) or one of the values listed below.
 These values are defined in ExtraKeysView.java, and the list of values (not including possible synonyms) is:</p>
@@ -672,8 +678,15 @@ Sorry, lol</p>
 <p class="admonition-title">Success</p>
 <p>The keyboard on the bottom should look something like this now!
 Well Done!</p>
-<p><img alt="Termux Extra Keys Loaded" src="/images/termux_extra_keys_loaded.png" /></p>
+<p><img alt="Termux Extra Keys Loaded" src="/images/termux_extra_keys_loaded.jpg" /></p>
 </div>
+<details class="bug"><summary>Tightly Packed Keys</summary><p><img alt="Termux Tight Keys" src="/image/termux_tight_keys.jpg" /></p>
+<p>If after doing all the above steps, the keys look too tightly
+packed to you then that's probably a bug.</p>
+<p>Just close the application with <code>CTRL+D</code> or Exit from the
+notification shade and restart it.
+This should hopefully fix it <img alt="🤞" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f91e.svg" title=":fingers_crossed:" /></p>
+</details>
                 
                   
                 
