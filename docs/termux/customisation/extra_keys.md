@@ -169,7 +169,7 @@ All 3 of these work the same. If one doesn't for you, then use the other :smiley
     ![Termux Extra Keys Loaded](/images/termux_extra_keys_loaded.jpg)
 
 ??? bug "Tightly Packed Keys"
-    ![Termux Tight Keys](/image/termux_tight_keys.jpg)
+    ![Termux Tight Keys](/images/termux_tight_keys.jpg)
 
     If after doing all the above steps, the keys look too tightly
     packed to you then that's probably a bug.
