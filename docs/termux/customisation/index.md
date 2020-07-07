@@ -16,7 +16,7 @@ Creating new sessions and terminals is even easier.
         ![Installing Dependencies](/images/termux_installing_dependencies.jpg)
 
 !!! example "The app should look something like this when it loads"
-    ![Termux Loaded](/images/termux_loaded.png)
+    ![Termux Loaded](/images/termux_loaded.jpg)
 
 
 
@@ -26,12 +26,17 @@ in a `key=value` style method.
 
 For doing that, you first need to create a directory[^1] named `.termux`
 
+!!! example
+    ```bash
+    $ mkdir $HOME/.termux
+    ```
+
 ??? question "Did you know?"
     * On OS X machines, the files which start with `.` are hidden.
       These aren't shown when you type in `ls`. To show these files you have to use the `-a` flag
 
         !!! example
-            ![Termux ls -a](/images/termux_ls_all.png)
+            ![Termux ls -a](/images/termux_ls_all.jpg)
 
             *The directory and files are just for an example*
     * The `.` represents the current working directory.
@@ -73,7 +78,7 @@ and if it does; then just opens it
     It should look something like this:
 
     !!! success ""
-        ![Termux Opened termux.properties File](/images/termux_opened_properties_file.png)
+        ![Termux Opened termux.properties File](/images/termux_opened_properties_file.jpg)
 
 ## Adding configurations
 * [Termux Shortcuts](./extra_keys.md#understanding-keys-on-termux-and-shortcuts)

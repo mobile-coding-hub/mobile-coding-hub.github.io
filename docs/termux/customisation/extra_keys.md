@@ -54,7 +54,7 @@ To enable the extra keys view you have to long tap on the keyboard button in the
 (Swipe from left → right to open the drawer)
 
 !!! abstract
-    ![Termux Left Drawer](/images/termux_left_drawer.png)
+    ![Termux Left Drawer](/images/termux_left_drawer.jpg)
 
 You can also press `VOLUME UP+Q` or `VOLUME UP+K`.
 
@@ -67,6 +67,15 @@ Open the `termux.properties` file:
 !!! example
     ```bash
     $ nano ~/.termux/termux.properties
+    ```
+
+??? error "Directory .../home/.termux doesn't exist"
+    ![Termux Nano Directory Doesn't Exist](/images/termux_directory_doesnt_exist.jpg)
+
+    If you get the above error, then that means that the `.termux` directory
+    doesn't exist. Try making it, before doing this, with
+    ```bash
+    mkdir $HOME/.termux/
     ```
 
 Now we will start by adding two rows of some really useful keys(default keys until v0.66)
@@ -85,14 +94,14 @@ if desired, by "backslash-escaping" the line feed at the end of each line, thus:
     ```bash
     extra-keys = [ \
         ['ESC','/','-','HOME','UP','END','PGUP'], \
-        ['TAB','CTRL','ALT','LEFT','DOWN','RIGHT','PGDN']
+        ['TAB','CTRL','ALT','LEFT','DOWN','RIGHT','PGDN'] \
     ]
     ```
 
 !!! success
     It should look something like this:
 
-    ![Termux Extra Keys Written](/images/termux_extra_keys_written.png)
+    ![Termux Extra Keys Written](/images/termux_extra_keys_written.jpg)
 
 Each key "entry" can be either a string (such as `'|'`, `'/'` or `'='`) or one of the values listed below.
 These values are defined in ExtraKeysView.java, and the list of values (not including possible synonyms) is:
@@ -157,4 +166,14 @@ All 3 of these work the same. If one doesn't for you, then use the other :smiley
     The keyboard on the bottom should look something like this now!
     Well Done!
 
-    ![Termux Extra Keys Loaded](/images/termux_extra_keys_loaded.png)
+    ![Termux Extra Keys Loaded](/images/termux_extra_keys_loaded.jpg)
+
+??? bug "Tightly Packed Keys"
+    ![Termux Tight Keys](/image/termux_tight_keys.jpg)
+
+    If after doing all the above steps, the keys look too tightly
+    packed to you then that's probably a bug.
+
+    Just close the application with `CTRL+D` or Exit from the
+    notification shade and restart it.
+    This should hopefully fix it :fingers_crossed:
