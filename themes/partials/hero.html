@@ -1,0 +1,26 @@
+<!-- Determine class according to level -->
+{% set class = "md-hero" %}
+{% if "tabs" not in config.theme.features %}
+  {% set class = "md-hero md-hero--expand" %}
+{% endif %}
+
+<!-- Hero teaser -->
+<div class="{{ class }}" data-md-component="hero">
+  <div class="md-hero__inner md-grid">
+    {{ page.meta.hero }}
+
+    <div class="ko-fi">
+      <script type='text/javascript' src='https://ko-fi.com/widgets/widget_2.js'></script>
+      <script type='text/javascript'>
+        kofiwidget2.init('Buy me a Ko-fi', '#29abe0', 'D1D41VSPS');
+        kofiwidget2.draw();
+      </script>
+    </div>
+  </div>
+</div>
+
+<style>
+.ko-fi {
+  padding-top: 8px;
+}
+</style>
