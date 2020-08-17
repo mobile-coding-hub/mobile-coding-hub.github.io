@@ -32,9 +32,13 @@ nav:
 theme:
     name: material
     custom_dir: themes
+
+    include_search_page: false
+    search_index_only: true
+
     language: en
     palette:
-        scheme: slate
+        scheme: preference
         primary: teal
         accent: orange
     font:
@@ -49,6 +53,15 @@ theme:
         next: 78     # n
         previous: 80 # p
         search: 83   # s
+
+
+plugins:
+    - search
+    - git-revision-date-localized:
+        type: timeago
+    - minify:
+        minify_html: true
+
 
 extra_css:
   - 'stylesheets/extra.css'
@@ -72,14 +85,16 @@ extra:
           link: https://instagram.com/__axvin__
         - icon: material/coffee
           link: https://ko-fi.com/AXVin
-    version: 1.2
+    version: 1.3
 
 # Extensions
 markdown_extensions:
+    - mdtooltips
     - footnotes
     - admonition
-    - codehilite:
-        guess_lang: false
+    - pymdownx.highlight:
+        use_pygments: true
+        # guess_lang: true
     - toc:
         permalink: true
     - meta
