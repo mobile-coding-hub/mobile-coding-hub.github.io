@@ -81,8 +81,8 @@ and if it does; then just opens it
         ![Termux Opened termux.properties File](/images/termux_opened_properties_file.jpg)
 
 ## Adding configurations
-* [Termux Shortcuts](./extra_keys.md#understanding-keys-on-termux-and-shortcuts)
-* [Adding Extra Keys](./extra_keys.md#adding-extra-keys)
+* [Termux Shortcuts](./keyboard_shortcuts.md)
+* [Adding Extra Keys](./extra_keys.md)
 
 
 <!-- Footnotes -->
