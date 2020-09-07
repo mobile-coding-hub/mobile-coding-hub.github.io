@@ -24,7 +24,6 @@ nav:
         - Installation: termux/installation.md
         - Customisation:
             - Introduction: termux/customisation/index.md
-            - Keyboard Shortcuts: termux/customisation/keyboard_shortcuts.md
             - Extra Keys: termux/customisation/extra_keys.md
         # - Python: termux/python.md
     - Help & Support: support.md
