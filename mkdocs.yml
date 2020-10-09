@@ -62,7 +62,6 @@ plugins:
     - minify:
         minify_html: true
 
-
 extra_css:
   - 'stylesheets/extra.css'
 
